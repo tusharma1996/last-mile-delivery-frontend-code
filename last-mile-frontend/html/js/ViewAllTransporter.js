@@ -1,7 +1,5 @@
 $(document).ready(function(){
     const Url = "http://localhost:3001/api/delivery.Transporter";
-
-    $('#ViewAllTransporter').click(function(){
         
         $.ajax({
             url: Url,
@@ -10,11 +8,22 @@ $(document).ready(function(){
                 
                 console.log(result);
                 var data = result;
-                var htmlText = ' '
+                var htmlText = '<table class="table"><tr>'
+                htmlText += '<th>Driver Name</th>'
+                htmlText += '<th>Transporter Name</th>'
+                htmlText += '<th>Vehicle Number</th>'
+                htmlText += '<th>Vehicle Id</th>'
+                htmlText += '<th>Email Id</th>'
+                htmlText += '<th>Current Location</th></tr>'
                 for (var key in data){
-
-               // htmlText += '<div>';
-                htmlText += '<table><tbody">'
+                    htmlText += '<tr><td>'+data[key].DriverFirstName +' '+data[key].DriverLastName+'</td>'
+                    htmlText += '<td>'+data[key].TransporterName+'</td>'
+                    htmlText += '<td>'+data[key].VehicleNumber+'</td>'
+                    htmlText += '<td>'+data[key].VehicleId+'</td>'
+                    htmlText += '<td>'+data[key].emailId+'</td>'
+                    htmlText += '<td>'+data[key].location+'</td></tr>'
+            /*
+                htmlText += '<table><tbody>'
                 htmlText += '<tr><th>Driver Name:</th>' + '<td>'+ data[key].DriverFirstName +' '+data[key].DriverLastName + '</td><td>&nbsp&nbsp&nbsp &nbsp</td></tr>';
                 htmlText += '<tr><th>Transporter Name:</th>' + '<td>'+ data[key].TransporterName + '</td><td>&nbsp&nbsp&nbsp&nbsp </td></tr>';
                 htmlText += '<tr><th>Vehicle Number:e</th>' + '<td>'+ data[key].VehicleNumber + '</td><td>&nbsp&nbsp&nbsp&nbsp  </td></tr>';
@@ -22,7 +31,7 @@ $(document).ready(function(){
                 htmlText += '<tr><th>Email Id:</th>' + '<td>'+ data[key].emailId + '</td><td>&nbsp&nbsp&nbsp&nbsp  </td></tr>';
                 htmlText += '<tr><th>Current Location:</th>' + '<td>'+ data[key].location + '</td><td>&nbsp&nbsp&nbsp&nbsp</td></tr>';
                 htmlText += '<tr><th></th>' + '<td>'+'</td><td>&nbsp&nbsp&nbsp&nbsp</td></tr></tbody></table><p></p>';
-                // htmlText += '</div>';
+            */
                 
                 /*
                 htmlText += '<div class="div-conatiner">';
@@ -51,7 +60,6 @@ $(document).ready(function(){
                 console.log(error.responseText)
             }
 
-        })        
-    })
+        })   
 
 })

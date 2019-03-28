@@ -1,8 +1,6 @@
 $(document).ready(function(){
     const Url = "http://localhost:3001/api/delivery.Order";
 
-    $('#ViewAllOrder').click(function(){
-        
         $.ajax({
             url: Url,
             type: "GET",
@@ -57,6 +55,5 @@ $(document).ready(function(){
             }
 
         })        
-    })
 
 })

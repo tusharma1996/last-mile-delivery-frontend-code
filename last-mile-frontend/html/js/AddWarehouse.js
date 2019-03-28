@@ -29,9 +29,13 @@ $(document).ready(function(){
             }
         })        
     })
+
     $('.btn-secondary').click(function(){
         location.reload();
     })
+})
+    
+    /**
     $('#ViewAllWarehouse').click(function(){
         
         $.ajax({
@@ -66,7 +70,7 @@ $(document).ready(function(){
                 $('#btn').click(function(){
                     location.reload();
                 })
-                */
+                
             },
             error:function(error){
                 console.log(error.responseText)
@@ -74,4 +78,4 @@ $(document).ready(function(){
 
         })        
     })
-})
+    */

@@ -39,6 +39,8 @@ $(document).ready(function(){
     $('.btn-secondary').click(function(){
         location.reload();
     })
+})
+    /**
     $('#ViewAllOrder').click(function(){
         
         $.ajax({
@@ -84,7 +86,7 @@ $(document).ready(function(){
                 $('#btn').click(function(){
                     location.reload();
                 })
-            */
+            
             document.getElementById('ListOrder').innerHTML = htmlText
             document.getElementById('change1').innerHTML = "All Orders"
             document.getElementById('change2').innerHTML = "Order Details"
@@ -96,4 +98,4 @@ $(document).ready(function(){
 
         })        
     })
-})
+    */

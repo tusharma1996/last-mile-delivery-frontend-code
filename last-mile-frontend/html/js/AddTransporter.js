@@ -1,7 +1,6 @@
 $(document).ready(function(){
     const Url = "http://localhost:3001/api/delivery.Transporter";
 
-
     $('.btn-primary').click(function(){
         var data = $('#AddTransporter').serializeArray()
         var correctData = {"$class":"delivery.Transporter",
@@ -10,9 +9,7 @@ $(document).ready(function(){
         for(obj of data){
             correctData[obj.name] = obj.value; 
         }
-        // console.log(data)
-       // console.log(correctData)
-
+        
         $.ajax({
             url: Url,
             type: "POST",
@@ -32,6 +29,11 @@ $(document).ready(function(){
     $('.btn-secondary').click(function(){
         location.reload();
     })
+})
+
+
+
+    /**
     $('#ViewAllTransporter').click(function(){
         
         $.ajax({
@@ -64,7 +66,7 @@ $(document).ready(function(){
                 htmlText += '<p class="p-emailId" margin-top=0.1em margin-bottom=0.1em> Vehicle Id: ' + data[key].emailId + '</p>';
                 htmlText += '<p class="p-location" margin-top=0.1em margin-bottom=0.1em> Current Location: ' + data[key].location + '</p>';
                 htmlText += '</div>';
-                */
+                
                 }
                 document.getElementById('ListTransporter').innerHTML = htmlText
                 document.getElementById('change1').innerHTML = "All Transporters"
@@ -76,7 +78,7 @@ $(document).ready(function(){
              /*   $('#btn').click(function(){
                     location.reload();
                 })
-            */
+            
             },
             error:function(error){
                 console.log(error.responseText)
@@ -84,4 +86,4 @@ $(document).ready(function(){
 
         })        
     })
-})
+    */
