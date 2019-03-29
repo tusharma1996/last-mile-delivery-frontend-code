@@ -5,6 +5,7 @@ $(document).ready(function(){
         var data = $('#AddTransporter').serializeArray()
         var correctData = {"$class":"delivery.Transporter",
                            "holderId": "Transporter"+ Math.floor((Math.random()*1000) + 1),
+                           "location": "",
                         }
         for(obj of data){
             correctData[obj.name] = obj.value; 

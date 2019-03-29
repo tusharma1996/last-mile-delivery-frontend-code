@@ -22,6 +22,9 @@ $(document).ready(function(){
                     htmlText += '<td>'+data[key].VehicleId+'</td>'
                     htmlText += '<td>'+data[key].emailId+'</td>'
                     htmlText += '<td>'+data[key].location+'</td></tr>'
+                    
+                }
+                htmlText += '</table>'
             /*
                 htmlText += '<table><tbody>'
                 htmlText += '<tr><th>Driver Name:</th>' + '<td>'+ data[key].DriverFirstName +' '+data[key].DriverLastName + '</td><td>&nbsp&nbsp&nbsp &nbsp</td></tr>';
@@ -43,11 +46,9 @@ $(document).ready(function(){
                 htmlText += '<p class="p-location" margin-top=0.1em margin-bottom=0.1em> Current Location: ' + data[key].location + '</p>';
                 htmlText += '</div>';
                 */
-                }
+               
                 document.getElementById('ListTransporter').innerHTML = htmlText
-                document.getElementById('change1').innerHTML = "All Transporters"
-                document.getElementById('change2').innerHTML = "Transporter Details"
-                document.getElementById('change3').innerHTML = " "
+
                 // document.getElementById('BTN').innerHTML = "<button id='btn' type='button'>Reset</button>"
                  
                 // $('.row').append(htmlText)

@@ -56,7 +56,7 @@ $(document).ready(function(){
             data: correctData,
             success: function(result){
                 console.log(result);
-                alert('Contract added');
+                alert('Path added');
                 location.reload();
             },
             error:function(error){
